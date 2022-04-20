@@ -13,6 +13,7 @@
   font-size: 62.5%;
   font-style: normal;
   font-weight: 400;
+  --text: clamp(1.4rem, 2.4rem, 3rem);
 }
 
 @keyframes levitate {
@@ -95,7 +96,7 @@ header .logo-title {
 }
 
 header .logo-title p {
-  font-size: 40px;
+  font-size: 4rem;
   line-height: 34px;
   letter-spacing: 0.05em;
   color: #ffffff;
@@ -106,7 +107,7 @@ header .text-main-ice-cream {
   text-align: center;
   font-family: "Roboto", sans-serif;
   color: #ffffff;
-  font-size: 2.4rem;
+  font-size: var(--text);
   line-height: 2rem;
   padding: 0 5.4rem 12.5rem;
   display: none;
@@ -189,6 +190,13 @@ main .text-main-ice-cream {
   background-image: url(./images/sorvete4.png);
 }
 
+main .image-wrapper .flex:nth-child(1) .ice-cream4,
+main .image-wrapper .flex:nth-child(2) .ice-cream3,
+main .image-wrapper .flex:nth-child(3) .ice-cream1,
+main .image-wrapper .flex:nth-child(3) .ice-cream4 {
+  display: none;
+}
+
 .label-ice-cream {
   position: absolute;
   top: 1.6rem;
@@ -208,21 +216,62 @@ main .text-main-ice-cream {
   animation: totopdown 1.5s;
 }
 
-@media (min-width: 700px) {
+footer {
+  display: none;
+}
+
+@media (min-width: 700px) and (max-width: 929px) {
+  body {
+    max-width: 100%;
+  }
+
+  main .page {
+    padding: 1.4rem 12rem 6rem;
+  }
+
+  .ice-cream1,
+  .ice-cream2,
+  .ice-cream3,
+  .ice-cream4 {
+    width: 100%;
+    height: 50rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 930px) {
   body {
     max-width: 100%;
     display: grid;
     grid-template-columns: 37.7rem 1fr;
-    align-items: flex-start;
+    grid-template-areas:
+      "header main"
+      "header footer";
   }
 
   header {
+    grid-area: header;
     width: 100%;
     padding-top: 3.2rem;
   }
 
+  header .logo-title p {
+    font-size: 3rem;
+  }
+
   header .text-main-ice-cream {
     display: inline-block;
+    font-size: var(--text);
+  }
+
+  main {
+    background: #ffffff;
+    grid-area: main;
+  }
+
+  main .page {
+    padding: 6.4rem 8.1rem 5rem 9.8rem;
   }
 
   main .page .image-wrapper {
@@ -232,5 +281,52 @@ main .text-main-ice-cream {
 
   main .text-main-ice-cream {
     display: none;
+  }
+
+  main .ice-cream1,
+  main .ice-cream3 {
+    height: 22rem;
+  }
+
+  main .image-wrapper .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  main .image-wrapper .flex:nth-child(1) .ice-cream4,
+  main .image-wrapper .flex:nth-child(2) .ice-cream3,
+  main .image-wrapper .flex:nth-child(3) .ice-cream4,
+  main .image-wrapper .flex:nth-child(3) .ice-cream1 {
+    display: inline-block;
+  }
+
+  main .image-wrapper .flex:nth-child(3) .ice-cream3,
+  main .image-wrapper .flex:nth-child(4) {
+    display: none;
+  }
+
+  main .label-ice-cream {
+    display: none;
+  }
+
+  footer {
+    display: inline-block;
+    grid-area: footer;
+    height: 7.4rem;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #4a4e69;
+    background: #ffffff;
+  }
+
+  footer a {
+    text-decoration: none;
+  }
+
+  footer a span {
+    font-weight: 700;
   }
 }
