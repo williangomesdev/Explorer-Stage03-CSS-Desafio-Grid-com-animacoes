@@ -51,6 +51,7 @@
 
 body {
   font-family: "Staatliches", cursive;
+  width: 100%;
   max-width: 38.4rem;
   margin: 0 auto;
 }
@@ -119,7 +120,8 @@ main {
 }
 
 main .page {
-  padding: 1.4rem 3.2rem 6rem;
+  padding: 1.4rem 2.2rem 6rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -285,12 +287,19 @@ footer {
 
   main .ice-cream1,
   main .ice-cream3 {
-    height: 22rem;
+    width: 22rem;
+    height: 15rem;
   }
 
+  main .ice-cream2,
+  main .ice-cream4 {
+    width: 22rem;
+    height: 35rem;
+  }
   main .image-wrapper .flex {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 3.2rem;
   }
 
@@ -299,6 +308,9 @@ footer {
   main .image-wrapper .flex:nth-child(3) .ice-cream4,
   main .image-wrapper .flex:nth-child(3) .ice-cream1 {
     display: inline-block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   main .image-wrapper .flex:nth-child(3) .ice-cream3,

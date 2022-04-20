@@ -33,8 +33,12 @@ Desafios proposto pelo programa de formação explorer da rocketseat, onde foi p
 <img src="https://img.shields.io/badge/Html5-05122A?style=flat&logo=html5" alt="html5 Badge" height="25">&nbsp;
 
 ## Imagens
-<p align="center"><img src="./gitImg/fullscreen.png"></p>
+<p align="center"><img src="./gitImg/Capturar.PNG"></p>
 
+<div style="display:flex;">
+<p align="center"><img src="./gitImg/127.0.0.1_5500_Grid_com_animacoes_(iPad).png" width="300"></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p align="center"><img src="./gitImg/127.0.0.1_5500_Grid_com_animacoes_(Moto G4).png" width="200"></p>
+</div>
 ## Autor
 
 Criado por [Willian Amaro Gomes](https://github.com/williangomesdev)
